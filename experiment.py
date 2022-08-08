@@ -88,29 +88,6 @@ def run_experiment(agent, shapes):
 
 
 
-def squash_list2(lis, n):
-    '''
-        Given a vector of length M, returns a vector of length M/n,
-        where each element is the sum of n elements of lis.
-    '''
-    new_lis = []
-    for i in range(0, len(lis), n):
-        v = sum(lis[i:i+n])
-        new_lis.append(v)
-    return new_lis
-
-
-
-def transpose2(li):
-    '''
-        Takes an input a 2-dimensional list, and returns
-        the transposed version of that list.
-        I.e. columns and rows are flipped.
-    '''
-    return [[x[i] for x in li] for i in range(len(li[0]))] 
-
-
-
 def create_posterior_images(agents, filename, posterior, triplet_types, triplet_posterior,
                             posterior_se=None, triplet_posterior_se=None):
     '''
